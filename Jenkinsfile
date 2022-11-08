@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                git 'https://github.com/janiceyujie/spring-petclinic.git'
+//                 git 'https://github.com/janiceyujie/spring-petclinic.git'
                 sh './mvnw clean compile'
             }
         }
