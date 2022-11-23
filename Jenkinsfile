@@ -29,5 +29,10 @@ pipeline {
                 }
             }
         }
+        stage('Execute ansible playbook') {
+            steps {
+                ansiblePlaybook becomeUser: 'vagrant', credentialsId: 'private-key', installation: 'ansible', inventory: '/etc/ansible/hosts', playbook: '/etc/ansible/hw2.yaml', sudoUser: 'vagrant'
+            }
+        } 
     }
 }
